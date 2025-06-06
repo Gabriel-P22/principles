@@ -16,7 +16,7 @@ Foi criada por **Alberto Brandolini** e é bastante utilizada em projetos que ap
 
 ---
 
-## Benefícios
+## ✅ Benefícios
 
 - Promove entendimento compartilhado entre técnicos e negócio.
 - Descobre processos e regras de negócio ocultas.
@@ -43,7 +43,7 @@ Foi criada por **Alberto Brandolini** e é bastante utilizada em projetos que ap
 
 ---
 
-## Referências
+## 📚 Referências
 
 - Alberto Brandolini — criador do Event Storming  
 - Livros e workshops sobre DDD e Event Storming
