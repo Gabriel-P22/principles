@@ -77,6 +77,11 @@ DDD não obriga o uso de microserviços, mas ajuda a decidir **quando** e **como
 
 ---
 
+### 7. Projeto prático
+
+Na raiz da pasta `DDD`, você encontrará um exemplo de como estruturar uma aplicação utilizando os princípios do Domain-Driven Design. O projeto está implementado em **Java** com **Springboot**, mas os conceitos podem ser aplicados em qualquer linguagem de programação. O importante é entender a **organização do domínio, os contextos e os padrões usados**, não a tecnologia em si.
+
+
 ## ✅ Benefícios do DDD
 
 - Código alinhado com as regras de negócio
