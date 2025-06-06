@@ -95,4 +95,5 @@ Na raiz da pasta `DDD`, você encontrará um exemplo de como estruturar uma apli
 
 - *Domain-Driven Design: Tackling Complexity in the Heart of Software* - Eric Evans  
 - *Implementing Domain-Driven Design* - Vaughn Vernon
+- *Full-cycle 3.0* - Wesley Willians
 
