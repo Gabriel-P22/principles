@@ -19,14 +19,15 @@ Na raiz da pasta **NEST**, vamos ter uma pasta para cada tópico comentado a cim
 
 ## Como começar?
 
-Para começar, vamos precisar configurar o cli do nest. Podemos criar tudo no modo padrão, criando com as proprias mãos, mas isso tem um custo de tempo muito maior. Para evitar esse problema, vamos instalar a **CLI** do **NEST**.
 
+
+Inicialmente, vamos instalar a **CLI** do **NEST** para criação de alguns recursos. 
 
 > npm i -g @nestjs/cli
 
 Quais são os beneficios de usar a CLI?
 
-Conseguimos criar modulos, middalware, pipes e outros recursos de forma automatica.
+Conseguimos criar modulos, middalware, pipes e outros recursos de forma automatica. Podemos ter a autonomia de criar com as nossas proprias mãos, mas vamos acabar gastando mais tempo e recurso de forma desnecessária.
 
 ## Como criar uma aplicação?
 
