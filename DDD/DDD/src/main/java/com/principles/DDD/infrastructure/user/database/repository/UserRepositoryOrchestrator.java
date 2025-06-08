@@ -15,12 +15,12 @@ public class UserRepositoryOrchestrator implements UserRepositoryInterface {
 
     private final UserRepository repository;
 
-    public UserRepositoryOrchestrator(UserRepository repository) {
+    public UserRepositoryOrchestrator(final UserRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public void create(User domainEntity) {
+    public void create(final User domainEntity) {
         if (repository.existsByEmail(domainEntity.getEmail())) {
             throw new ConflictExceptions("Use another email");
         }
@@ -29,8 +29,8 @@ public class UserRepositoryOrchestrator implements UserRepositoryInterface {
     }
 
     @Override
-    public void update(String id, User domainEntity) {
-        UserEntity entity  = this.findById(id);
+    public void update(final String id, final User domainEntity) {
+        final UserEntity entity  = this.findById(id);
         entity.setName(domainEntity.getName())
                 .setEmail(domainEntity.getEmail())
                 .setPassword(domainEntity.getPassword());
@@ -39,13 +39,13 @@ public class UserRepositoryOrchestrator implements UserRepositoryInterface {
     }
 
     @Override
-    public void delete(String id) {
+    public void delete(final String id) {
         final UserEntity entity = findById(id);
         repository.delete(entity);
     }
 
     @Override
-    public User find(String id) throws Exception {
+    public User find(final String id) throws Exception {
         return new User(this.findById(id));
     }
 
@@ -60,7 +60,7 @@ public class UserRepositoryOrchestrator implements UserRepositoryInterface {
         }).collect(Collectors.toList());
     }
 
-    private UserEntity findById(String id) {
+    private UserEntity findById(final String id) {
         return repository.findById(id).orElseThrow(() -> new NotFoundException("User not found"));
     }
 }

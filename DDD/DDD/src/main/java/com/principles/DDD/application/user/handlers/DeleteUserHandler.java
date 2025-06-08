@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 public class DeleteUserHandler {
     private final UserRepositoryInterface repository;
 
-
     public DeleteUserHandler(final UserRepositoryInterface repository) {
         this.repository = repository;
     }

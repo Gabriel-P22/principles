@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public ExceptionResponse notFound(Exception exception, HttpServletRequest request) {
+    public ExceptionResponse notFound(final Exception exception, final HttpServletRequest request) {
         return new ExceptionResponse(
                 LocalDateTime.now(),
                 HttpStatus.NOT_FOUND.value(),
@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MissingParamsException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ExceptionResponse missingParams(Exception exception, HttpServletRequest request) {
+    public ExceptionResponse missingParams(final Exception exception, final HttpServletRequest request) {
         return new ExceptionResponse(
                 LocalDateTime.now(),
                 HttpStatus.BAD_REQUEST.value(),
@@ -36,7 +36,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ConflictExceptions.class)
     @ResponseStatus(HttpStatus.CONFLICT)
-    public ExceptionResponse conflict(Exception exception, HttpServletRequest request) {
+    public ExceptionResponse conflict(final Exception exception, final HttpServletRequest request) {
         return new ExceptionResponse(
                 LocalDateTime.now(),
                 HttpStatus.CONFLICT.value(),

@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
 public class CreateANewUserHandler {
     private final UserRepositoryInterface repository;
 
-
     public CreateANewUserHandler(final UserRepositoryInterface repository) {
         this.repository = repository;
     }
