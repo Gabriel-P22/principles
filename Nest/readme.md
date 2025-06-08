@@ -56,3 +56,6 @@ src/
 └── app.service.ts
 
 ```
+### link da documentação do nest:
+
+> https://docs.nestjs.com/
