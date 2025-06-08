@@ -10,10 +10,10 @@ public class User {
     private final String email;
     private final String password;
 
-    public User(final UserEntity requestEntity) throws Exception {
-        this.name = requestEntity.getName();
-        this.email = requestEntity.getEmail();
-        this.password = requestEntity.getPassword();
+    public User(final UserEntity userEntity) throws Exception {
+        this.name = userEntity.getName();
+        this.email = userEntity.getEmail();
+        this.password = userEntity.getPassword();
 
         this.validation();
     }

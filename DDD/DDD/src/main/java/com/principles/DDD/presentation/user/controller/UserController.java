@@ -1,9 +1,6 @@
 package com.principles.DDD.presentation.user.controller;
 
-import com.principles.DDD.application.user.handlers.CreateANewUserHandler;
-import com.principles.DDD.application.user.handlers.DeleteUserHandler;
-import com.principles.DDD.application.user.handlers.FindUserHandler;
-import com.principles.DDD.application.user.handlers.UpdateUserHandler;
+import com.principles.DDD.application.user.handlers.UserHandler;
 import com.principles.DDD.presentation.user.dtos.UserRequest;
 import com.principles.DDD.presentation.user.dtos.UserResponse;
 import org.springframework.http.HttpStatus;
@@ -22,40 +19,30 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    private final UserHandler handler;
 
-    private final CreateANewUserHandler createANewUserHandler;
-    private final FindUserHandler findUserHandler;
-    private final DeleteUserHandler deleteUserHandler;
-    private final UpdateUserHandler updateUserHandler;
-
-    public UserController(final CreateANewUserHandler createANewUserHandler,
-                          final FindUserHandler findUserHandler,
-                          final DeleteUserHandler deleteUserHandler,
-                          final UpdateUserHandler updateUserHandler) {
-        this.createANewUserHandler = createANewUserHandler;
-        this.findUserHandler = findUserHandler;
-        this.deleteUserHandler = deleteUserHandler;
-        this.updateUserHandler = updateUserHandler;
+    public UserController(final UserHandler handler) {
+        this.handler = handler;
     }
 
     @PostMapping
     public ResponseEntity<UserResponse> create(@RequestBody final UserRequest requestEntity) throws Exception {
-        return ResponseEntity.status(201).body(createANewUserHandler.createANewUser(requestEntity));
+        return ResponseEntity.status(HttpStatus.CREATED).body(handler.create(requestEntity));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> findById(@PathVariable final String id) throws Exception {
-        return ResponseEntity.ok(findUserHandler.find(id));
+        return ResponseEntity.ok(handler.findById(id));
     }
 
     @GetMapping
     public ResponseEntity<List<UserResponse>> findAll() throws Exception {
-        return ResponseEntity.ok(findUserHandler.findAll());
+        return ResponseEntity.ok(handler.findAll());
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable final String id) throws Exception {
-        deleteUserHandler.delete(id);
+        handler.delete(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
@@ -64,6 +51,6 @@ public class UserController {
             @PathVariable final String id,
             @RequestBody final UserRequest requestEntity
     ) throws Exception {
-        return ResponseEntity.ok(updateUserHandler.update(id, requestEntity));
+        return ResponseEntity.ok(handler.update(id, requestEntity));
     }
 }
