@@ -17,7 +17,10 @@ Hoje o **Nest** é utilizado por grandes empresas para conseguir trazer todas es
 ### Vamos abordar alguns temas como:
 
 - CLI
+- Setup
+- resources
 - Modules
+- Providers
 - Controllers
 - Providers
 - Middleswares
@@ -29,7 +32,7 @@ Hoje o **Nest** é utilizado por grandes empresas para conseguir trazer todas es
 
 Na raiz da pasta **NEST**, vamos ter uma pasta para cada tópico comentado a cima e uma aplicação usando cada recurso.
 
-### Como começar?
+### CLI:
 
 Inicialmente, vamos instalar a **CLI** do **NEST** para criação de alguns recursos. 
 
@@ -39,7 +42,7 @@ Quais são os beneficios de usar a CLI?
 
 Conseguimos criar modulos, middalware, pipes e outros recursos de forma automatica. Podemos ter a autonomia de criar com as nossas proprias mãos, mas vamos acabar gastando mais tempo e recurso de forma desnecessária.
 
-### Como criar uma aplicação?
+### Setup da aplicação:
 
 Para criar um projeto vamos usar um **comando** do proprio **nest** para gerar o projeto.
 
@@ -56,6 +59,25 @@ src/
 └── app.service.ts
 
 ```
+
+### Resource:
+
+O Resource serve para criarmos um **recurso** de forma automatica pelo **cli**. Podemos criar o seguintes recursos:
+
+- REST
+- MICROSERVICES
+- GrahQL(Schema ou code first)
+- WebSockets
+
+Para criarmos um recurso iremos utilizar o seguinte comando:
+
+> nest g resource nome-do-recurso
+
+Quais os beneficios do **resource**?
+Podemos criar CRUDs, sockets e outros recursos de forma automatizada. Também é possível gerar e configurar modelos com base nos recursos que estamos desenvolvendo. É claro que será necessário o desenvolvimento da entidade, mas o passo-a-passo repetitivo e totalmente gerado **cli**, assim **sendo necessário** apenas a configuração das **services**, **regras de negocio** e **estrutura de dados**.
+
+
+
 ### link da documentação do nest:
 
 > https://docs.nestjs.com/
