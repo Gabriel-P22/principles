@@ -4,7 +4,6 @@ import { UserI, UserRepository } from './user.repository';
 @Injectable()
 export class UserService {
 
-
     constructor(private userRepository: UserRepository) {}
 
     @Post()
