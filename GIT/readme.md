@@ -49,3 +49,19 @@ Depois, você pode enviar (push) suas mudanças para um repositório central (co
 Sendo assim, o Git é atualmente a melhor opção do mercado para controle de versionamento. Ele é: **distribuido**, **Rapido e eficiente**, **seguro**, **Rastreável**, **Podemos trabalhar com branchs**
 
 ## Como o git surgiu e porque?
+
+O Git foi criado em 2005 por Linus Torvalds, o mesmo desenvolvedor do Linux, para resolver um problema importante: o sistema de controle de versão usado até então, chamado BitKeeper, teve seu uso restringido para o projeto Linux.
+
+Isso gerou a necessidade de um sistema próprio, rápido, seguro e distribuído, que permitisse a colaboração eficiente de milhares de desenvolvedores ao redor do mundo no código do Linux.
+
+Assim, o Git foi desenvolvido com o objetivo de ser:
+
+- Distribuído, para que cada desenvolvedor tivesse uma cópia completa do projeto e pudesse trabalhar offline.
+
+- Rápido, para lidar com grandes volumes de código e múltiplas operações com eficiência.
+
+- Confiável e seguro, garantindo integridade dos dados por meio de hashes criptográficos.
+
+- Flexível, facilitando o trabalho com ramificações (branches) e fusões (merges) de código.
+
+Desde então, o Git se tornou a ferramenta padrão para versionamento em projetos de software, tanto pequenos quanto gigantescos.
