@@ -1,20 +1,40 @@
-import { Body, Get, Injectable, Post } from '@nestjs/common';
-import { UserI, UserRepository } from './user.repository';
+import { Injectable } from '@nestjs/common';
+import { UserRepository } from './user.repository';
+import { UserEntity } from './entity/user.entity';
+import { v4 as uuid } from 'uuid';
+import { UserDto } from './dto/user.dto';
+import { UserResponse } from './dto/user-response.dto';
 
 @Injectable()
 export class UserService {
-
     constructor(private userRepository: UserRepository) {}
 
-    @Post()
-    async createUser(@Body() body: UserI) {
-        this.userRepository.save(body);
+    async save(user: UserDto): Promise<UserEntity> {
+        const entity = new UserEntity(
+            uuid(),
+            user.name,
+            user.email,
+            user.password
+        );
 
-        return body;
+        this.userRepository.users.push();
+
+        return entity;
     }
 
-    @Get()
-    async listUsers() {
-        return this.listUsers();
+    async getAll(): Promise<UserResponse[]> { 
+        return this.userRepository.users.map((u) => new UserResponse(u.getId, u.getName));
+    }
+
+    async update(id: string, entity: Partial<UserEntity>) {
+        const possibleUser = this.userRepository.findUser(id);
+
+        if (!possibleUser) {
+            throw new Error("user not found")
+        }
+
+        this.userRepository.updateUser(entity);
+
+        return possibleUser;
     }
 }

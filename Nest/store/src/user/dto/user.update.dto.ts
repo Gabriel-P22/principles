@@ -1,17 +1,17 @@
-import { IsEmail, IsNotEmpty, IsString, MinLength } from "class-validator";
+import { IsEmail, IsNotEmpty, IsOptional, IsString, MinLength } from "class-validator";
 import { EmailValidatorDecorator } from "../validations/email.validator";
 
-export class UserDto {
+export class UserUpdateDto {
     @IsString()
-    @IsNotEmpty({ message: 'O name é obrigatório' })
+    @IsOptional()
     name: string;
 
     @IsEmail(undefined, { message: 'O e-mail é obrigatório' })
     @EmailValidatorDecorator({ message: "Use outro email" }) //custom
-    @IsNotEmpty({ message: 'O e-mail é obrigatório' })
+    @IsOptional()
     email: string;
 
     @MinLength(6)
-    @IsNotEmpty({ message: 'A senha é obrigatório' })
+    @IsOptional()
     password: string;
 }

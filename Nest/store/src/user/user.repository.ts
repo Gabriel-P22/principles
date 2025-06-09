@@ -1,21 +1,27 @@
 import { Injectable } from "@nestjs/common";
+import { UserEntity } from "./entity/user.entity";
 
-export interface UserI {
-    name: string
-}
 
 @Injectable()
 export class UserRepository {
-    private users: UserI[] = [];
+    public users: UserEntity[] = [];
 
-    async save(user) {
-        this.users.push(user);
-
-        console.log(this.users)
+    async hasEmail(email: string) {
+        const user = this.users.find(user => user.getEmail === email);
+        return user !== undefined;
     }
 
-    async getAll() {
-        return this.users;
+    async findUser(userId) {
+        return this.users.find(
+            user => user.getId === userId
+        )
     }
 
+    async updateUser(userEntity: Partial<UserEntity>) {
+        Object.entries(userEntity).forEach(([ key, value ]) => {
+            if (key === 'id') { return }
+
+            userEntity[key] = value
+        })
+    }
 }
