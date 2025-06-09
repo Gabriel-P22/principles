@@ -27,5 +27,25 @@ Neste projeto, vou te ensinar como instalar, criar e usar o **Git** no seu dia a
     - Evitar force push sem necessidade
     - Usar .gitignore corretamente
     - Nomear branches de forma padronizada
+- Documentação oficial
 
 ## O que é o GIT?
+
+O **Git** é uma ferramenta de controle de versão distribuído. Mas o que isso quer dizer?
+
+```text
+De forma simples: é um sistema que permite que cada desenvolvedor tenha uma cópia completa do projeto no seu próprio computador. Essa cópia inclui todo o histórico de mudanças, o código completo, e os arquivos do projeto.
+
+Isso significa que você pode:
+
+- Trabalhar no projeto mesmo sem internet
+- Ver versões antigas do código
+- Testar mudanças sem afetar o projeto principal
+- Compartilhar suas mudanças com outras pessoas quando quiser
+
+Depois, você pode enviar (push) suas mudanças para um repositório central (como o GitHub) ou receber (pull) mudanças de outras pessoas.
+```
+
+Sendo assim, o Git é atualmente a melhor opção do mercado para controle de versionamento. Ele é: **distribuido**, **Rapido e eficiente**, **seguro**, **Rastreável**, **Podemos trabalhar com branchs**
+
+## Como o git surgiu e porque?
