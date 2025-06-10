@@ -19,8 +19,17 @@ public class UserHandler {
     }
 
     public UserResponse create(final UserRequest requestEntity) throws Exception {
-        final User domainEntity = UserFactory.create(requestEntity);
+        User domainEntity;
+
+        if (requestEntity.address().isPresent()) {
+            domainEntity = UserFactory.create(requestEntity, requestEntity.address().get());
+        } else {
+            domainEntity = UserFactory.create(requestEntity);
+        }
+
         repository.create(domainEntity);
+
+
         return domainEntity.toResponse();
     }
 
