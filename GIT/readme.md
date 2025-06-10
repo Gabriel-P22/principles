@@ -5,8 +5,8 @@ Neste projeto, vou te ensinar como instalar, criar e usar o **Git** no seu dia a
 - O que é o GIT?
 - Como o git surgiu e porque?
 - Como instalar o GIT?
-- Como configurar uma chave ssh
-- Como criar um repositório no github e para que serve
+- Como configurar uma chave ssh?
+- Como criar um repositório no github e para que serve?
 - Comandos principais do git
     - git status
     - git add
