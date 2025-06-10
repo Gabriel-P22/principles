@@ -37,4 +37,8 @@ export class UserService {
 
         return possibleUser;
     }
+
+    async remove(id: string) {
+        await this.userRepository.remove(id)
+    }
 }

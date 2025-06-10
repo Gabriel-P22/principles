@@ -24,4 +24,10 @@ export class UserRepository {
             userEntity[key] = value
         })
     }
+
+    async remove(id: string) {
+        this.users = this.users.filter(
+            user => user.getId !== id
+        );
+    }
 }
