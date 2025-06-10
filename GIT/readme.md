@@ -3,7 +3,7 @@
 Neste projeto, vou te ensinar como instalar, criar e usar o **Git** no seu dia a dia. Mais do que isso, o objetivo é desmistificar o Git e o Git Flow, para que você possa começar a usá-los com confiança.
 
 - O que é o GIT?
-- Como o git surgiu e porque?
+- Como o git surgiu e por que?
 - Como instalar o GIT?
 - Como configurar uma chave ssh?
 - Como criar um repositório no github e para que serve?
@@ -49,7 +49,7 @@ Depois, você pode enviar (push) suas mudanças para um repositório central (co
 
 Sendo assim, o Git é atualmente a melhor opção do mercado para controle de versionamento. Ele é: **distribuido**, **Rapido e eficiente**, **seguro**, **Rastreável**, **Podemos trabalhar com branchs**
 
-## Como o git surgiu e porque?
+## Como o git surgiu e por que?
 
 O Git foi criado em 2005 por Linus Torvalds, o mesmo desenvolvedor do Linux, para resolver um problema importante: o sistema de controle de versão usado até então, chamado BitKeeper, teve seu uso restringido para o projeto Linux.
 
