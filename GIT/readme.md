@@ -4,7 +4,7 @@ Neste projeto, vou te ensinar como instalar, criar e usar o **Git** no seu dia a
 
 - O que é o GIT?
 - Como o git surgiu e porque?
-- Como instalar o GIT
+- Como instalar o GIT?
 - Como configurar uma chave ssh
 - Como criar um repositório no github e para que serve
 - Comandos principais do git
@@ -65,3 +65,5 @@ Assim, o Git foi desenvolvido com o objetivo de ser:
 - Flexível, facilitando o trabalho com ramificações (branches) e fusões (merges) de código.
 
 Desde então, o Git se tornou a ferramenta padrão para versionamento em projetos de software, tanto pequenos quanto gigantescos.
+
+## Como instalar o GIT?
