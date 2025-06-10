@@ -125,3 +125,17 @@ Apos informamos o valor nos campos, o terminal vai solicitar:
 Ao final, vamos ter dentro da pasta **.ssh** dois novos arquivos. A **chave publica(id_ed25519.pub)** e uma **chave privada(id_ed25519)**.
 
 Uma vez com a sua chave criada, podemos copiar o conteudo da **chave ssh publica**, ir ao **GITHUB**, acessar configurações, SSH, registrar uma nova chave e informar o **nome da chave ssh** e a **chave ssh**.
+
+## Como criar um repositório no github e para que serve?
+
+Um **repositório** é um local onde guardamos o nosso código de forma digital. Em outras palavras, é como uma **pasta digital** organizada para guardar todos os arquivos do projeto.
+
+### Como podemos cria-lá?
+
+Vamos acessar o nosso perfil do **GITHUB**, clicar em **repositórios** e clicar no botão verde escrito new. Uma vez feito isso, podemos informar o nome do repositório, se ele vai ser publico ou privado, se vai ter um **readme.md** e outros arquivos de configuração.
+
+### Como podemos enviar arquivos para o GITHUB?
+
+Podemos enviar esses arquivos de algumas formas. Uma delas é arrastar a pasta do projeto para a área de drag-and-drop, **mas isso não é recomendado**.
+
+**A forma recomendada** e usada por praticamente 100% da comunidade é através do **Git** e vamos aprender como fazer isso em breve.
